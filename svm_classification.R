@@ -32,7 +32,7 @@ p_val <- apply(data_trans, 1, function(x) t.test(x[1:n], x[n+1:length(x)])$p.val
 p_val <- data.frame(p_val)
 p_val$gene <- rownames(p_val)
 p <- p_val[order(p_val$p_val),]
-2015-1961
+
 #Select discordant samples
 discordant <- read.table("/Users/stuti/Data/gec22/star_cufflinks_pipeline/discordant_lusc", header=F)
 discordant <- gsub("-",".", discordant$V1)
